@@ -180,6 +180,9 @@ const passwordTwo = document.getElementById("pwTwo");
 const passwordLength = document.getElementById("length");
 const withSymbols = document.getElementById("symbols");
 const withNumbers = document.getElementById("numbers");
+const clipboardOne = document.getElementById("clip");
+const clipboardTwo = document.getElementById("clipTwo");
+
 const noSymbols = characters;
 
 const removedSymbols = noSymbols.slice(start, 61);
@@ -189,6 +192,9 @@ const noChecked = noneChecked.slice(start, 52);
 
 let pwLength = 0;
 
+let passOne = "";
+let passTwo = "";
+
 function start() {
   pwLength = passwordLength.value;
   let randomPw = [];
@@ -196,6 +202,8 @@ function start() {
   generateRandom(randomPw);
   generateRandom(randomTwo);
 
+  passOne = randomPw.join("");
+  passTwo = randomTwo.join("");
   passwordOne.textContent = randomPw.join("");
   passwordTwo.textContent = randomTwo.join("");
 
@@ -204,6 +212,20 @@ function start() {
 }
 
 generatePw.addEventListener("click", start, false);
+
+function copy() {
+  let copyText = passOne;
+  navigator.clipboard.writeText(copyText);
+  alert("Copied the text: " + copyText);
+}
+function copyTwo() {
+  let copyText = passTwo;
+  navigator.clipboard.writeText(copyText);
+  alert("Copied the text: " + copyText);
+}
+
+clipboardOne.addEventListener("click", copy, false);
+clipboardTwo.addEventListener("click", copyTwo, false);
 
 function generateRandom(toGenerate) {
   if (withNumbers.checked === true && withSymbols.checked === true) {

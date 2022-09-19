@@ -104,6 +104,7 @@ section {
 }
 
 .pw {
+  position: relative;
   width: 211px;
   height: 39px;
   background: #273549;
@@ -116,7 +117,18 @@ section {
 }
 
 .pw p {
-  margin-top: 8px;
+  margin-top: 9px;
+}
+
+.pw .icon {
+  display: inline-block;
+  position: absolute;
+  top: 9px;
+  right: 3px;
+}
+.pw img {
+  width: 20px;
+  height: 20px;
 }
 
 /* --------------------------------- switch --------------------------------- */
