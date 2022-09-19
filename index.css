@@ -29,6 +29,7 @@ body {
   height: 100vh;
   margin: 0 auto;
   min-width: 360px;
+  overflow: hidden;
 }
 
 main {
