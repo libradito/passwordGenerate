@@ -24,7 +24,7 @@
             <p>Never use an insecure password again.</p>
           </div>
           <div class="generate">
-            <button class="btn">Generate passwords</button>
+            <button id="pw-btn" class="btn">Generate passwords</button>
           </div>
 
           <div class="settings">
@@ -42,14 +42,14 @@
               <div class="set-switch">
                 <p>Symbols:</p>
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input id="symbols" type="checkbox" />
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="set-switch">
                 <p>Numbers:</p>
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input id="numbers" type="checkbox" />
                   <span class="slider round"></span>
                 </label>
               </div>
@@ -58,10 +58,10 @@
 
           <div class="passwords">
             <div class="pw">
-              <p>password one</p>
+              <p id="pwOne"></p>
             </div>
             <div class="pw">
-              <p>password two</p>
+              <p id="pwTwo"></p>
             </div>
           </div>
         </div>
