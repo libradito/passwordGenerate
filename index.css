@@ -28,6 +28,7 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
+  min-width: 360px;
 }
 
 main {
@@ -35,9 +36,10 @@ main {
   max-width: 550px;
   background-color: #ecfdf5;
   margin: 0 auto;
-  height: 550px;
+  /* height: 550px;
+  margin-top: 10rem; */
+  height: 100vh;
   min-width: 300px;
-  margin-top: 10rem;
 }
 
 section {
@@ -83,8 +85,10 @@ section {
   margin-top: 4rem;
   border-top: 1px solid #d5d4d8;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
+
 .more-settings {
   display: flex;
   justify-content: space-around;
@@ -191,4 +195,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  .passwords {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main {
+    height: 550px;
+    margin-top: 10rem;
+  }
 }
