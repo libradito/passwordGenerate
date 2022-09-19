@@ -229,7 +229,6 @@ clipboardTwo.addEventListener("click", copyTwo, false);
 
 function generateRandom(toGenerate) {
   if (withNumbers.checked === true && withSymbols.checked === true) {
-    console.log("BothCheked");
     for (let i = 0; i < pwLength; i++) {
       let randomNum = Math.floor(Math.random() * characters.length) + 1;
       toGenerate.push(characters[randomNum]);
