@@ -32,6 +32,18 @@ body {
   overflow: hidden;
 }
 
+header {
+  font-size: 1.3rem;
+  color: #ecfdf5;
+  padding: 3rem;
+  height: 1rem;
+}
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 main {
   position: relative;
   max-width: 550px;
@@ -50,7 +62,7 @@ section {
 }
 
 .container {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .header p {
