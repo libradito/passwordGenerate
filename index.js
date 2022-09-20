@@ -182,7 +182,8 @@ const withSymbols = document.getElementById("symbols");
 const withNumbers = document.getElementById("numbers");
 const clipboardOne = document.getElementById("clip");
 const clipboardTwo = document.getElementById("clipTwo");
-
+const toggle = document.getElementById("theme");
+const page = document.querySelector("body");
 const noSymbols = characters;
 
 const removedSymbols = noSymbols.slice(start, 61);
@@ -258,3 +259,13 @@ function generateRandom(toGenerate) {
 }
 
 console.log(passwordLength.value);
+
+function toggleTheme() {
+  if (toggle.checked) {
+    page.classList.replace("light", "dark");
+  } else {
+    page.classList.replace("dark", "light");
+  }
+}
+
+toggle.addEventListener("click", toggleTheme, false);
